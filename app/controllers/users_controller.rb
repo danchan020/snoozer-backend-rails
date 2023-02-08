@@ -19,8 +19,7 @@ class UsersController < ApplicationController
         user = @current_user
         user.update!(params.permit(:email, :username))
         render json: user
-        / double check update of old password logic after front end is developed /
-        if user.authenticate(params.permit(:old_password))
+        if user.authenticate(params[:old_password])
             user.update!(params.permit(:password, :password_confirmation))
             render json: user
         else 
