@@ -25,6 +25,6 @@ class AlarmsController < ApplicationController
     private
 
     def alarm_params
-        params.permit(:user_id, :alarm_before, :alarm_after, :alarm_increment, :alarm_name, :is_disabled)
+        params.permit(:user_id, :alarm_end, :alarm_start, :alarm_increment, :alarm_name, :is_disabled)
     end
 end
