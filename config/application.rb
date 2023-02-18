@@ -11,7 +11,7 @@ module SnoozerBackendRails
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
     config.time_zone = 'Pacific Time (US & Canada)'
-    # config.active_record.default_timezone = :local
+    config.hosts << "8dd3-76-14-68-51.ngrok.io"
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
